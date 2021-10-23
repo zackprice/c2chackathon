@@ -40,6 +40,6 @@ def test_comprehend_client():
 def test_s3_client():
 
     client = S3Client()
-    
+
     actual = client.get_object(bucket_name="c2chackathon", key="professionaltraining.cvs")
     print(actual)
