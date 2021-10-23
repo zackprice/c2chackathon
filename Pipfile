@@ -13,6 +13,8 @@ uvicorn = "*"
 pydantic = "*"
 typing_extensions = "*"
 httpx = "== 0.17.1"
+boto3 = "*"
+
 
 [requires]
 python_version = "3.8"
