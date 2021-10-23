@@ -10,18 +10,12 @@ class Classes(BaseModel):
     Score: float
 
 
-class Labels(BaseModel):
-    Name: str
-    Score: float
-
 
 class ComprehendResponse(BaseModel):
     Classes: List[Classes]
-    Labels: List[Labels]
-
 
 class ComprehendClient:
-    def __init__(self, region_name: str = "us-west-2"):
+    def __init__(self, region_name: str = "us-east-1"):
         self.client = None
         self.region_name = region_name
         self.logger = logging.getLogger(__name__)
