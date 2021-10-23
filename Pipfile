@@ -1,0 +1,20 @@
+[[source]]
+url = 'https://pypi.python.org/simple'
+verify_ssl = true
+name = 'pypi'
+
+[dev-packages]
+black = "*"
+flake8 = "*"
+
+[packages]
+fastapi = "*"
+uvicorn = "*"
+typing_extensions = "*"
+httpx = "== 0.17.1"
+
+[requires]
+python_version = "3.8"
+
+[pipenv]
+allow_prereleases = true
