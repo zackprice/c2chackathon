@@ -1,6 +1,6 @@
 from botocore.stub import Stubber
 
-from comprehend_client import ComprehendClient, ComprehendResponse
+from comprehend_client import ComprehendClient, ComprehendResponse, S3Client
 
 
 def test_comprehend_client():
@@ -36,9 +36,10 @@ def test_comprehend_client():
         actual = client.classify_document(text="foo", endponint_arn="bar")
         assert actual == ComprehendResponse.parse_obj(response)
 
+
 def test_s3_client():
 
-    client = s3_Client()
+    client = S3Client()
     
-    actual = client.get_object(Bucket="c2chackathon", key="professionaltraining.cvs")
-    print (actual)
+    actual = client.get_object(bucket_name="c2chackathon", key="professionaltraining.cvs")
+    print(actual)
