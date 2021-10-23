@@ -5,7 +5,7 @@ from config import get_settings
 router = APIRouter()
 
 
-@router.get("/", summary="validates textcount")
+@router.get("/", summary="validates resumescore")
 def get():
     """
     This is the description
