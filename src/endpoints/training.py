@@ -8,10 +8,10 @@ from comprehend_client import S3Client
 router = APIRouter()
 
 
-@router.get("/", summary="this is the summary")
+@router.get("/", summary="returns the training data")
 def get():
     """
-    This is the description
+    Retrieves the data used in the training of the classifiers
     """
 
     client = S3Client()

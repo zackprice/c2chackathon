@@ -8,6 +8,6 @@ router = APIRouter()
 @router.get("/", summary="validates grammar")
 def get():
     """
-    This is the description
+    Check that resume is grammatically correct
     """
     return {"result": "OK", "version": get_settings().VERSION}

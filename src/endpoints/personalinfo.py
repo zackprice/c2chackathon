@@ -8,6 +8,6 @@ router = APIRouter()
 @router.get("/", summary="gets personalinfo")
 def get():
     """
-    This is the description
+    Checks to see if all personal information is present
     """
     return {"result": "OK", "version": get_settings().VERSION}
