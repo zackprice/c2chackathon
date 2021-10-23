@@ -7,10 +7,10 @@ from comprehend_client import ComprehendClient, ComprehendResponse, S3Client
 router = APIRouter()
 
 
-@router.get("/{text}", summary="validates grammar")
+@router.get("/{text}", summary="validates professionalism")
 def get(text: str):
     """
-    This is the description
+    Uses machine learning to classify the degree of Professionalism of your resume
     """
     client = ComprehendClient()
     response = client.classify_document(text=text, endponint_arn="arn:aws:comprehend:us-east-1:768862600548:document-classifier-endpoint/ProfesionalismChecker")
