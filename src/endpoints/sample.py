@@ -17,5 +17,6 @@ def get():
 async def post(file: UploadFile = File(...)):
     return {
         "filename": file.filename,
+        "type": file.content_type,
         "contents": await file.read()
     }
