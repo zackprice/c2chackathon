@@ -35,3 +35,10 @@ def test_comprehend_client():
     with stubber:
         actual = client.classify_document(text="foo", endponint_arn="bar")
         assert actual == ComprehendResponse.parse_obj(response)
+
+def test_s3_client():
+
+    client = s3_Client()
+    
+    actual = client.get_object(Bucket="c2chackathon", key="professionaltraining.cvs")
+    print (actual)
