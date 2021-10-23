@@ -10,7 +10,7 @@ MAX_SECTION = 100
 MIN_CONTENTS = 0
 MAX_CONTENTS = 100
 
-@router.get("/", summary="Text length check)
+@router.get("/", summary="Text length check")
 def get(inputtext: str=""):
     """
     Validate the length of text in Phrases, Sections and the Entire Resume
