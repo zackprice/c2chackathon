@@ -59,5 +59,6 @@ class S3Client:
 
     def get_object(self, bucket_name, key):
         response = self.client.get_object(Bucket=bucket_name, Key=key)
-        return response
+        contents = response['Body'].read()
+        return contents
 
